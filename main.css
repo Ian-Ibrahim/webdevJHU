@@ -1,0 +1,58 @@
+*{
+			text-align: center;
+			box-sizing: border-box;
+			
+		}
+		.menu{
+			position: relative;
+			justify-content: center;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.menu>*{
+			flex-wrap: wrap;
+			flex: 1 1 100%;
+		}
+		section{
+			background: rgb(211,211,211);
+			border: .1em solid rgb(0,0,0);
+			width: 100%;
+			padding: 1em 0.25em;
+			margin: 1em;
+			position: relative;
+			overflow: hidden;
+		}
+		section h2{
+			position: absolute;
+			top:-1em;
+			padding:.05rem .5rem;
+			right: 0;
+			background: rgb(23,23,225);
+			border-left: .01em solid rgb(0,0,0);
+			border-bottom: .01em solid rgb(0,0,0);
+		}
+		section:first-child h2{
+			background: rgb(230,3,17);
+		}
+		section:last-child h2{
+			background: rgb(17,150,75);
+
+		}
+		/*desktop responsive css*/
+		@media (min-width: 992px) {
+			.menu>*{
+					flex-wrap: wrap;
+					flex: 1 1 30%;
+			}
+		}
+		/*tablet responsive*/
+		@media (min-width: 768px) and (max-width: 991px) {
+			.menu>*{
+					flex-wrap: wrap;
+					flex: 1 1 5em;
+			}
+			.menu>*:last-child{
+				flex-wrap: wrap;
+				flex: 1 1 100%;
+			}
+		}
