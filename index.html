@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Module 2 assignment</title>
+	<style type="text/css">
+		*{
+			text-align: center;
+			box-sizing: border-box;
+		}
+		.menu{
+			position: relative;
+			justify-content: center;
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.menu>*{
+			flex-wrap: wrap;
+			flex: 1 1 100%;
+		}
+		section{
+			background: rgb(211,211,211);
+			border: .1em solid rgb(0,0,0);
+			width: 100%;
+			padding: 1em 0.25em;
+			margin: 1em;
+			position: relative;
+			overflow: hidden;
+		}
+		section h2{
+			position: absolute;
+			top:-1em;
+			padding:.05rem .5rem;
+			right: 0;
+			background: rgb(23,23,225);
+			border-left: .01em solid rgb(0,0,0);
+			border-bottom: .01em solid rgb(0,0,0);
+		}
+		section:first-child h2{
+			background: rgb(230,3,17);
+		}
+		section:last-child h2{
+			background: rgb(17,150,75);
+
+		}
+		/*desktop responsive css*/
+		@media (min-width: 992px) {
+			.menu>*{
+					flex-wrap: wrap;
+					flex: 1 1 30%;
+			}
+		}
+		/*tablet responsive*/
+		@media (min-width: 768px) and (max-width: 991px) {
+			.menu>*{
+					flex-wrap: wrap;
+					flex: 1 1 5em;
+			}
+			.menu>*:last-child{
+				flex-wrap: wrap;
+				flex: 1 1 100%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>Our Menu</h1>
+	<div class="menu">
+		<section>
+			<h2>Chicken</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique pharetra varius. Aliquam erat volutpat. Maecenas ac metus id lacus tempor varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum, ante quis ultricies aliquam. </p>
+		</section>
+		<section>
+			<h2>Beef</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique pharetra varius. Aliquam erat volutpat. Maecenas ac metus id lacus tempor varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum, ante quis ultricies aliquam. </p>
+		</section>
+		<section>
+			<h2>Sushi</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique pharetra varius. Aliquam erat volutpat. Maecenas ac metus id lacus tempor varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum, ante quis ultricies aliquam. </p>
+		</section>
+	</div>
+</body>
+</html>
